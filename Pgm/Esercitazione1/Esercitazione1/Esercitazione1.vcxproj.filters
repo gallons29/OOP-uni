@@ -21,12 +21,12 @@
     <ClInclude Include="..\..\..\Source\alist.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\Source\6_2-listTest.h">
+    <ClInclude Include="..\..\..\Source\6_3-listTest.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\6_2.cpp">
+    <ClCompile Include="..\..\..\Source\6_3.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

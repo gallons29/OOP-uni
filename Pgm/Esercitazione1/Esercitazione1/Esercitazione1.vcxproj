@@ -19,12 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\6_2-listTest.h" />
+    <ClInclude Include="..\..\..\Source\6_3-listTest.h" />
     <ClInclude Include="..\..\..\Source\alist.h" />
     <ClInclude Include="..\..\..\Source\list.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\6_2.cpp" />
+    <ClCompile Include="..\..\..\Source\6_3.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
