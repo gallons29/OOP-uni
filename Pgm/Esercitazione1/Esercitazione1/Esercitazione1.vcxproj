@@ -19,12 +19,14 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\6_3-listTest.h" />
-    <ClInclude Include="..\..\..\Source\alist.h" />
-    <ClInclude Include="..\..\..\Source\list.h" />
+    <ClCompile Include="..\..\..\Source\6_2.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\6_4.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\6_3.cpp" />
+    <ClInclude Include="..\..\..\Source\6_4-test.h" />
+    <ClInclude Include="..\..\..\Source\listTest.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
