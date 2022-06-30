@@ -4,6 +4,9 @@
 using namespace std;
 
 #include "6_4-test.h"
+#include "alist.h"
+
+void mediaVotiSort(Item* stud, int size);
 
 int main() {
 	string nString;
@@ -48,5 +51,39 @@ int main() {
 	un’età strettamente inferiore a eta_max e la stampa a video.Nell’esempio, con num_scelti uguale = 4 ed
 	eta_max = 25 la lista deve contenere gli studenti : Viola 30, Blu 28.3, Rosa 27.3 e Neri 25.56*/
 
+	mediaVotiSort(studenti, N);
+
+	for (int i = 0; i < N; i++) {
+		cout << studenti[i].getCognome() << " " << studenti[i].getEta() << " " << studenti[i].getVoti() << endl;
+	}
+
+	AList<Item> Lista;
+	for (int i = 0; i < N && Lista.length() < num_scelti; i++) {
+		if (studenti[i].getEta() < eta_max) {
+			Lista.append(studenti[i]);
+		}
+	}
+
+	printListaStudenti(Lista);
+
+
 	return 0;
+}
+
+void mediaVotiSort(Item* stud, int size) {
+
+	for (int i = 0; i < size; i++) {
+
+		Item maxTemp = stud[i];
+		for (int j = i; j < size; j++) {
+			Item confronto = stud[j];
+			if (confronto.getVoti() > maxTemp.getVoti()) {
+				stud[i] = confronto;
+				stud[j] = maxTemp;
+				maxTemp = confronto;
+			}
+		}
+
+	}
+
 }
