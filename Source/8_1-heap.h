@@ -37,39 +37,51 @@ class aPQ
 template <class Item>
 void fixUp(Item a[], int k)
   {
-    while (k > 1 && a[k/2] < a[k])
-      { exch(a[k], a[k/2]); k = k/2; }
+    while (k > 1 && !(a[k/2] < a[k])){
+        exch(a[k], a[k/2]);
+        k = k/2;
+    }
   }
 
 
 template <class Item>
-void fixDown(Item a[], int k, int N)
-  {
-    while (2*k <= N)
-      { int j = 2*k;
-        if (j < N && a[j] < a[j+1]) j++;
-        if (!(a[k] < a[j])) break;
-        exch(a[k], a[j]); k = j;
+void fixDown(Item a[], int k, int N){
+    while (2*k <= N){
+        int j = 2*k;
+        if (j < N && a[j+1] < a[j]) j++;
+        if (a[k] < a[j]) break;
+        exch(a[k], a[j]);
+        k = j;
       }
   }
 
 
 // heap based priority queue
 template <class Item>
-class PQ 
+class MinHeapPQ 
   {
     private:
-      Item *pq; 
+      Item *pq;
       int N;
     public:
-      PQ(int maxN)
-        { pq = new Item[maxN+1]; N = 0; }
-	  ~PQ() { delete[] pq; } // Destructor
-      int empty() const
-        { return N == 0; }
-      void insert(Item item)
-        { pq[++N] = item;  fixUp(pq, N); }
-      Item getmax()
+      MinHeapPQ(int maxN){
+          pq = new Item[maxN+1]; //essendo che nell'array posizionale la posizione 0 si tiene libera, serve uno spazio in piu
+          N = 0;
+      }
+	  ~MinHeapPQ(){ // Destructor
+          delete[] pq;
+      }
+
+      int empty() const {
+          return N == 0;
+      }
+
+      void insert(Item item){
+          pq[++N] = item;
+          fixUp(pq, N);
+      }
+      
+      Item getmin()
         { 
           exch(pq[1], pq[N]); 
           fixDown(pq, 1, N-1); 
@@ -82,7 +94,7 @@ class PQ
 template <class Item>
 void PQsort(Item a[], int l, int r)
   { int k;
-    PQ<Item> pq(r-l+1);
+    MinHeapPQ<Item> pq(r-l+1);
     for (k = l; k <= r; k++) pq.insert(a[k]);
     for (k = r; k >= l; k--) a[k] = pq.getmax();
   }
