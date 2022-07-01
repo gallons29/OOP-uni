@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\lqueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Source\lstack.h">
+    <ClInclude Include="..\..\..\Source\8_1-heap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\binary_tree_main.cpp">
+    <ClCompile Include="..\..\..\Source\heap_main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\8_1.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

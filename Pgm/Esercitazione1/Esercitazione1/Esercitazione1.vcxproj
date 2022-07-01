@@ -19,11 +19,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\lqueue.h" />
-    <ClInclude Include="..\..\..\Source\lstack.h" />
+    <ClInclude Include="..\..\..\Source\8_1-heap.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\binary_tree_main.cpp">
+    <ClCompile Include="..\..\..\Source\8_1.cpp" />
+    <ClCompile Include="..\..\..\Source\heap_main.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
