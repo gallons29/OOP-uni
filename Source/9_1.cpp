@@ -41,5 +41,11 @@ int main() {
 	bst1.show(cout);
 	bst2.show(cout);
 
+
+	LList<Item> listega;
+	bst1.merge(listega, bst2);
+
+	lprint(listega);
+
 	return 0;
 }

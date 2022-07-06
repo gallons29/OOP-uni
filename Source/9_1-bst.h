@@ -7,37 +7,11 @@
 using namespace std;
 
 #include "llist.h"
+#include "link.h"
+#include "9_1-listTest.h"
 
 typedef int Key;
-static int maxKey = 1000;
 
-class Item {
-private:
-	string data;
-public:
-	Key keydata;
-	Item() {
-		keydata = maxKey;
-	};
-	Item(Key k, string d) {
-		data = d;
-		keydata = k;
-	};
-	Key key() const {
-		return keydata;
-	};
-	int null() {
-		return keydata == maxKey;
-	};
-
-	string getdata() {
-		return data;
-	};
-	void show(ostream& os = cout) {
-		os << keydata << " " << data << endl;
-	};
-
-};
 
 // classe template per la realizzazione di un albero binario di ricerca
 template <class Item, class Key>
@@ -165,6 +139,15 @@ class BST
 			balanceR(h->r);
 		}
 
+
+   void insertListR(link& h, List<Item>& l) {
+	   if (h == 0) return;
+
+	   insert_ordered(l, h->item);
+	   insertListR(h->l, l);
+	   insertListR(h->r, l);
+   }
+
    /*
    int height(link h)
    {
@@ -206,8 +189,9 @@ class BST
 		  return height(head);
 	  }*/
 
-	  void merge(List& l, BST<Item><Key>& b) {
-
+	  void merge(List<Item>& l, BST<Item, Key>& b) {
+		  insertListR(head, l);
+		  insertListR(b.head, l);
 	  }
 
   };

@@ -19,20 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\9_1.cpp" />
+    <ClCompile Include="..\..\..\Source\9_3.cpp" />
     <ClCompile Include="..\..\..\Source\bst.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\9_1-bst.h" />
-    <ClInclude Include="..\..\..\Source\link.h" />
-    <ClInclude Include="..\..\..\Source\list.h" />
-    <ClInclude Include="..\..\..\Source\llist.h" />
+    <ClInclude Include="..\..\..\Source\9_3-bst.h" />
     <ClInclude Include="..\..\..\Source\symbol_table_item.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\x64\Release\info.dat" />
+    <Text Include="..\x64\Release\parteA.txt" />
+    <Text Include="..\x64\Release\parteB.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
