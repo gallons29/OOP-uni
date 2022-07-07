@@ -15,23 +15,17 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\..\Source\bst.cpp">
+    <ClCompile Include="..\..\..\Source\10_4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Source\9_3.cpp">
+    <ClCompile Include="..\..\..\Source\Soluzioni Esercitazioni\map.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Source\Soluzioni Esercitazioni\set.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\..\Source\symbol_table_item.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\Source\9_3-bst.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="..\x64\Release\parteA.txt" />
-    <Text Include="..\x64\Release\parteB.txt" />
+    <Text Include="..\x64\Release\lotto.txt" />
   </ItemGroup>
 </Project>
